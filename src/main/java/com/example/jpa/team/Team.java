@@ -1,12 +1,11 @@
-package com.example.jpa;
+package com.example.jpa.team;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,8 +13,9 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@ToString
 public class Team {
-    @Id
+    @Id @GeneratedValue/*(strategy = GenerationType.IDENTITY)*/
     private Long id;
     private String name;
 
