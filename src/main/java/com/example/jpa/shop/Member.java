@@ -19,12 +19,16 @@ public class Member {
     @Id @GeneratedValue
     @Column(name = "MEMBER_ID")
     private Long id;
-
-    @OneToMany(mappedBy = "order")
-    private List<Order> orders = new ArrayList<>();
-
+    @Column(name = "NAME")
     private String name;
+    @Column(name = "CITY")
     private String city;
+    @Column(name = "STREET")
     private String street;
+    @Column(name = "ZIPCODE")
     private String zipcode;
+
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
 }
+

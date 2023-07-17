@@ -13,11 +13,10 @@ public class Item {
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
     private Long id;
+    @Column(name = "NAME")
     private String name;
-
-    @ManyToOne
-    @JoinColumn(name = "MEMBER_ID")
-    private Member member;
+    @Column(name = "PRICE")
     private int price;
+    @Column(name = "STOCK_QUANTITY")
     private int stockQuantity;
 }

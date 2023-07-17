@@ -2,6 +2,8 @@ package com.example.jpa;
 
 import com.example.jpa.shop.Item;
 import com.example.jpa.shop.Member;
+import com.example.jpa.shop.Order;
+import com.example.jpa.shop.OrderItem;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,18 +20,9 @@ public class JpaMain {
 
         try{
 
-//            Member member = new Member(null,"member","1","1","1");
-//            em.persist(member);
-//
-//            Item item = new Item(null,"item",member,100,1);
-//            em.persist(item);
-
-//            Member findMember =  em.find(Member.class,1L);
-//            System.err.println(findMember);
-            Item item = em.find(Item.class, 2L);
-            System.err.println(item);
-
-
+            Member findMember = em.find(Member.class, 3L);
+            System.out.println("==================================");
+            System.out.println(findMember.getOrders());
 
             tx.commit();
         }catch (Exception e){
