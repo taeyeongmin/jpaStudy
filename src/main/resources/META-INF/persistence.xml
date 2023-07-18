@@ -6,12 +6,10 @@
              version="2.1">
     <persistence-unit name="jpaInf" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.example.jpa.shop.Member</class>
-        <class>com.example.jpa.shop.Item</class>
-        <class>com.example.jpa.shop.Order</class>
-        <class>com.example.jpa.shop.OrderItem</class>
-        <class>com.example.jpa.shop.Delivery</class>
-        <class>com.example.jpa.shop.Category</class>
+        <class>com.example.jpa.Item</class>
+        <class>com.example.jpa.Album</class>
+        <class>com.example.jpa.Book</class>
+        <class>com.example.jpa.Movie</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
@@ -20,7 +18,7 @@
             <property name="javax.persistence.jdbc.password" value="1234" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
 
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
 
             <!-- SQL문 로그 출력 -->
             <property name="hibernate.show_sql" value="true" />

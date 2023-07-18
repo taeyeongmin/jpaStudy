@@ -1,10 +1,5 @@
 package com.example.jpa;
 
-import com.example.jpa.shop.Item;
-import com.example.jpa.shop.Member;
-import com.example.jpa.shop.Order;
-import com.example.jpa.shop.OrderItem;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -20,9 +15,6 @@ public class JpaMain {
 
         try{
 
-            Member member = new Member();
-            member.setName("test");
-            em.persist(member);
 
             tx.commit();
         }catch (Exception e){
