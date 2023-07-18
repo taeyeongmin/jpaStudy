@@ -1,2 +1,4 @@
-package com.example.jpa.shop;public enum DeliveryStatus {
+package com.example.jpa.shop;
+
+public enum DeliveryStatus {
 }

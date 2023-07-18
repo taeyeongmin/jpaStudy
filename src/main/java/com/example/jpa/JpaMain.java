@@ -12,7 +12,7 @@ import javax.persistence.Persistence;
 
 public class JpaMain {
     public static void main(String[] args){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPATest");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpaInf");
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
@@ -20,9 +20,9 @@ public class JpaMain {
 
         try{
 
-            Member findMember = em.find(Member.class, 3L);
-            System.out.println("==================================");
-            System.out.println(findMember.getOrders());
+            Member member = new Member();
+            member.setName("test");
+            em.persist(member);
 
             tx.commit();
         }catch (Exception e){
