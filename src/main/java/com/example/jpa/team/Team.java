@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 public class Team {
     @Id @GeneratedValue/*(strategy = GenerationType.IDENTITY)*/
     private Long id;

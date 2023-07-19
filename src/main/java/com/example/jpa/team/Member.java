@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Getter
+@ToString
 public class Member {
     @Id @GeneratedValue/*(strategy = GenerationType.IDENTITY)*/
     private Long id;
